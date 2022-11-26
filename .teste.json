@@ -1,0 +1,87 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb",
+      "prettier",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx"],
+        "extends": [
+          "plugin:@typescript-eslint/eslint-recommended",
+          "plugin:@typescript-eslint/recommended",
+          "prettier/@typescript-eslint"
+        ],
+        "parser": "@typescript-eslint/parser",
+        "plugins": ["@typescript-eslint"]
+      }
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "react-hooks",
+      "prettier",
+      "eslint-plugin-import-helpers",
+      "import"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      }
+    },
+    "rules": {
+      "import/extensions": [
+        "error",
+        "always",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "prettier/prettier": [
+        "error",
+        {
+          "usePrettierrc": true
+        }
+      ],
+      "react-hooks/rules-of-hooks": "warn",
+      "react/react-in-jsx-scope": "off",
+      "react/display-name": "off",
+      "react/prop-types": "off",
+      "no-console": "warn",
+      "import/no-duplicates": ["error", { "considerQueryString": true }],
+      "import-helpers/order-imports": [
+        "warn",
+        {
+          "newlinesBetween": "always",
+          "groups": [
+            ["/^react/"],
+            ["module"],
+            ["/^~//"],
+            ["parent", "sibling", "index"]
+          ],
+          "alphabetize": { "order": "asc", "ignoreCase": true }
+        }
+      ]
+    }
+  }
+  
