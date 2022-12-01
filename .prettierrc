@@ -3,7 +3,7 @@
   "tabWidth": 2,
   "printWidth": 100,
   "useTabs": false,
-  "singleQuote": true,
+  "singleQuote": false,
   "arrowParens": "always",
   "endOfLine": "auto",
   "jsxSingleQuote": true,
