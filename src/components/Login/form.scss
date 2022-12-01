@@ -1,0 +1,204 @@
+@use "../../assets/styles/variables.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  color: #111;
+}
+input {
+  color: inherit;
+}
+
+.form {
+  position: absolute;
+  width: 60%;
+  height: 40rem;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border-radius: 2rem;
+  background: variables.$backgroundRapptr;
+
+  @media screen and (max-width: 400px) {
+    height: 22rem;
+  }
+
+  label {
+    color: variables.$text;
+    width: 100%;
+    float: left;
+    margin-left: 1rem;
+    font-size: 1em;
+    font-weight: bold;
+
+    @media screen and (max-width: 400px) {
+      font-size: 0.85em;
+    }
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin-left: 2rem;
+
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(127, 127, 147, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 4s linear infinite;
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      justify-content: left;
+      margin-left: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 600px) {
+      justify-content: left;
+      margin-left: 1.2rem;
+      flex-wrap: wrap;
+      font-size: 2.5em;
+    }
+
+    @media screen and (max-width: 510px) {
+      font-size: 2em;
+    }
+
+    @media screen and (max-width: 400px) {
+      justify-content: left;
+      margin-left: 1.2rem;
+      flex-wrap: wrap;
+      font-size: 1.6em;
+    }
+  }
+
+  form {
+    flex-wrap: wrap;
+  }
+}
+
+.form .field {
+  p {
+    margin-left: 0.9rem;
+    color: red;
+    font-size: 0.8em;
+  }
+}
+
+.form .form_input {
+  flex: 1 1 300px;
+  flex-direction: column;
+  margin: 10px;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  outline: 3px solid transparent;
+  transition: outline 0.2s, flex-basis 0.2s;
+}
+
+.form_input {
+  width: 100%;
+
+  @media screen and (max-width: 955px) {
+    width: 75%;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 60%;
+  }
+}
+
+.form .form_input:nth-child {
+  flex: 3 1 300px;
+}
+.form .form_input:hover,
+.form .form_input:focus {
+  outline: 3px solid variables.$blueRapptr;
+}
+.form_button_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 2rem;
+
+  @media screen and (max-width: 900px) {
+    width: 80%;
+    margin-left: 1rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 60%;
+    margin-left: 2rem;
+  }
+}
+.form .form_submit {
+  top: -5px;
+  flex: 1 1 50rem;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.4em;
+  border-radius: 10px;
+  background-color: #708dfd;
+  color: #ffffff;
+  box-shadow: 0 12px 7px -5px rgba(0, 0, 0, 0.35);
+  transition: box-shadow 0.2s, top 0.2s, background-color 0.2s, flex-basis 0.2s;
+}
+.form .form_submit:hover,
+.form .form_submit:focus {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.35);
+  top: 0;
+}
+.form .form_submit:focus {
+  background-color: #4a65ce;
+  outline: 0;
+}
+.form_submit {
+  font-size: large;
+  font-weight: bold;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+}
