@@ -3,3 +3,5 @@
 
 # Ignore built files except build/index.js
 src/assets/*
+node_modules
+public
